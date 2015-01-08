@@ -1,0 +1,290 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#000000"
+    tools:context="edu.cmu.WakeUp.AlarmActivity" >
+    
+    <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+    
+	<!-- Greeting -->
+
+    <ImageView
+        android:id="@+id/alarm_greeting"
+        style="@style/CenterImageHorizontally"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/conditionImage"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:minHeight="100dp"
+        android:minWidth="50dp"
+        android:src="@drawable/sunrise" />
+	
+    <!-- Color block for weather -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop = "10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight ="10dp"
+        android:background="#888A786E"
+        android:orientation="vertical" >
+
+        <!-- City -->
+		<LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	        
+		    <ImageView
+	            android:id="@+id/alarm_topWeatherIcon"
+	            style="@style/CenterImageHorizontally"
+	            android:layout_marginTop="5dp"
+	            android:layout_marginLeft="5dp"
+	            android:contentDescription="@string/conditionImage"
+	            android:maxHeight="20dp"
+	            android:maxWidth="20dp"
+	            android:minHeight="10dp"
+	            android:minWidth="10dp"
+	            android:src="@drawable/na" />
+		    <TextView
+	            android:id="@+id/alarm_locationText"
+	            style="@style/LocationLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/location" />
+		    
+		</LinearLayout>
+        
+        <!-- Centered Weather Data -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" 
+            android:layout_marginTop ="10dp"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight ="10dp">
+            
+            <TextView 
+	            android:id="@+id/alarm_currentTemp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal"
+	            android:text="@string/highTemp"
+	            android:textColor="#ffffff"
+	            android:textSize="50sp" />
+
+            <ImageView
+                android:id="@+id/alarm_weatherConditionIcon"
+                style="@style/CenterImageHorizontally"
+                android:contentDescription="@string/conditionImage"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:minHeight="50dp"
+                android:minWidth="50dp"
+                android:src="@drawable/na" />
+
+            <!-- high and low temperatures -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/alarm_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/highTemp"
+                    android:textColor="#ffffff"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/alarm_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/lowTemp"
+                    android:textColor="#ffffff"
+                    android:textSize="36sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/alarm_conditionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="@string/conditionText"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Color Block for Bus Info -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#888A786E"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_marginTop ="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight ="10dp">
+        
+        <ImageView
+	        android:id="@+id/alarm_busIcon"
+	        android:layout_width ="wrap_content"
+	        android:layout_height ="wrap_content"
+	        android:adjustViewBounds="true"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="5dp"
+	        android:contentDescription="@string/conditionImage"
+	        android:maxHeight="20dp"
+	        android:maxWidth="20dp"
+	        android:minHeight="10dp"
+	        android:minWidth="10dp"
+	        android:src="@drawable/bus" />
+
+        <!-- Bus Info Column -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/alarm_busRoute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="@string/busRoute"
+                android:textColor="#ffffff"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/alarm_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"
+                android:layout_marginTop="-15dp"
+                android:text="@string/direction"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/alarm_busStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="@string/busStop"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <!-- arrival time column -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/alarm_timeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="@string/timeLabel"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/alarm_busTime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="@string/busTime1"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/alarm_busTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="@string/busTime2"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/alarm_busTime3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="@string/busTime3"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Color Block for stop button -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#888A786E"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_marginTop ="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight ="10dp" >
+
+        <TextView
+            android:id="@+id/alarm_alarmTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text="7:20 AM"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+        
+         <Button
+             android:id="@+id/alarm_stop"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="3"
+             android:text="Stop" />
+     
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

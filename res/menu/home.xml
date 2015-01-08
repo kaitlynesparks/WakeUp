@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.cmu.WakeUp.HomeActivity" >
+
+    <item
+        android:id="@+id/action_set_preferences"
+        android:icon="@drawable/action_bar_preferences"
+        android:title="@string/menuPreferences"
+        android:showAsAction ="always"/>
+
+</menu>

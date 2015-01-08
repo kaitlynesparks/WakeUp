@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WakeUp</string>
+    <string name="action_settings">Settings</string>
+   
+    <!-- Strings for activity_home layout -->
+    <string name="location">Pittsburgh</string>
+    <string name="conditionImage">WeatherCondition</string>
+   	<string name="conditionText">Sunny</string>
+   	<string name="highTemp">40</string>
+   	<string name="lowTemp">20</string>
+   	<string name="busRoute">71D</string>
+   	<string name="direction">Inbound</string>
+   	<string name="busStop">5th and Beechwood</string>
+   	<string name="timeLabel">Arriving:</string>
+   	<string name="busTime1">8:30</string>
+   	<string name="busTime2">8:50</string>
+   	<string name="busTime3">9:10</string>
+   	<string name="AlarmLabel">Wake Up: </string>
+   	
+   	<string name="menuPreferences">Preferences</string>
+   	
+   	
+   	<!-- Alarm Screen -->
+   	<string name="alarm_greeting">Good Morning!</string>
+   	
+
+</resources>
